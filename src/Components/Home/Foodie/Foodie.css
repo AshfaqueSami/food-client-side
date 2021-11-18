@@ -1,0 +1,4 @@
+.food_cart:hover {
+    transform: scale(1.05);
+    transition: transform 400ms ease-in-out;
+}
