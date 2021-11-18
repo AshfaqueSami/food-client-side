@@ -11,7 +11,7 @@ const OrderPlace = () => {
   const dateRef = useRef();
   const placeRef = useRef();
   useEffect(() => {
-    fetch("http://localhost:5000/packages")
+    fetch("https://cryptic-peak-67091.herokuapp.com/packages")
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);
@@ -27,7 +27,7 @@ const OrderPlace = () => {
       bookingImg: singlePackages?.image,
       status: "Pending",
     };
-    fetch("http://localhost:5000/bookings", {
+    fetch("https://cryptic-peak-67091.herokuapp.com/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -6,7 +6,7 @@ const Bookings = () => {
   const [bookings, setBookings] = useState([]);
   const { user } = useAuth();
   useEffect(() => {
-    fetch(`http://localhost:5000/bookings?email=${user.email}`)
+    fetch(`https://cryptic-peak-67091.herokuapp.com/bookings?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);
@@ -15,7 +15,7 @@ const Bookings = () => {
       "Are you sure, you want to delete this package?"
     );
     if (confirmLog) {
-      fetch(`http://localhost:5000/bookings?id=${id}`, {
+      fetch(`https://cryptic-peak-67091.herokuapp.com/bookings?id=${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -33,7 +33,7 @@ const Bookings = () => {
       <section className="flex justify-center">
         <div class="container px-5 py-24 mx-auto">
           {
-            bookings.map(booking=><SingleBooking
+            bookings.map(booking => <SingleBooking
               key={booking._id}
               booking={booking}
               DeleteBtn={DeleteBtn}

@@ -4,14 +4,14 @@ import AllBooking from "../AllBooking/AllBooking";
 const AllBookings = () => {
   const [allBookings, setAllBookings] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allbookings")
+    fetch("https://cryptic-peak-67091.herokuapp.com/allbookings")
       .then((res) => res.json())
       .then((data) => setAllBookings(data));
   }, []);
   const DeleteBtn = (id) => {
     const confirmLog = window.confirm("you want to delete this package?");
     if (confirmLog) {
-      fetch(`http://localhost:5000/bookings?id=${id}`, {
+      fetch(`https://cryptic-peak-67091.herokuapp.com/bookings?id=${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -26,7 +26,7 @@ const AllBookings = () => {
     }
   };
   const ApproveBtn = (id) => {
-    fetch(`http://localhost:5000/bookings?id=${id}`, {
+    fetch(`https://cryptic-peak-67091.herokuapp.com/bookings?id=${id}`, {
       method: "PUT",
     })
       .then((res) => res.json())

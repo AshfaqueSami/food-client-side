@@ -12,7 +12,7 @@ const AddBooking = () => {
       description: descriptionRef.current.value,
       image: imgRef.current.value,
     };
-    fetch("http://localhost:5000/packages", {
+    fetch("https://cryptic-peak-67091.herokuapp.com/packages", {
       method: "POST",
       headers: {
         "content-type": "application/json",
