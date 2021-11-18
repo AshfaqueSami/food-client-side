@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import React, { useEffect,useState } from "react";
 import Banner from "../Banner/Banner";
 import Foodie from "../Foodie/Foodie";
 import Package from "../Package/Package";
