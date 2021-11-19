@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# delicioumo
+This is a food cattering website for people who wants to arrange a programme without any arrangement by themselves.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+
+Websites live link [Click here](https://delicioumo.web.app/).
 
 ## Available Scripts
 
